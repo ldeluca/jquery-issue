@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Mobile issue template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="js/jquery.mobile.css"> 
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script> 
+  <script src="js/jquery.mobile.js"></script> 
+  <script>
+    // Your JavaScript ...
+  </script>
+  <style>
+    #edit-with-js-bin { display: none !important; }
+  </style>
+</head>
+<body>
+ 
+<div data-role="page">
+
+	<div class="ui-content">
+
+	<form>
+		<input id="the-input">
+	</form>
+
+	<a href="#the-popup" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Open Popup</a>
+
+	<div data-role="popup" id="the-popup">
+		<form>
+			<fieldset>
+				<div class="ui-field-contain">
+					<label for="login">Login</label>
+					<input id="login">
+					<label for="password">Password</label>
+					<input type="password" id="password">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>
