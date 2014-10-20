@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Mobile issue template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="js/jquery.mobile.css"> 
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script> 
+  <script src="js/jquery.mobile.js"></script> 
+  <script>
+    // Your JavaScript ...
+  </script>
+  <style>
+    #edit-with-js-bin { display: none !important; }
+  </style>
+</head>
+<body>
+ 
+<div data-role="page" id="PedidosEditar" data-url="/pedidos/editar/111/15">
+	<div data-role="header">
+		<h1>Agregar</h1>
+	<a href="#" class="ui-btn-right pedido-total" style="display:none;">0</a>
+	</div><!-- /header -->
+
+	<div id="content" data-role="content">
+				<strong>Some info here </strong>
+
+<div class="ui-grid-a">
+	<div class="ui-block-a">Blah</div>
+	<div class="ui-block-b">455</div>
+</div>
+
+<!-- Relevant section  -->
+<div class="ui-grid-a">
+	<div class="ui-block-a">Block A content</div>
+	<div class="ui-block-b">
+		<form id="pedidos-articulos-editar" data-rel="back">
+			<input type="hidden" name="pedido_id" value="111" />
+			<input type="hidden" name="articulo_id" value="15" />
+			<input type="text" name="cantidad" id="cantidad" value="" data-mini="true" pattern="[0-9]+" />
+		</form>
+	</div>
+</div>
+<!-- /Relevant section  -->
+		
+		<!-- lisa test -->
+		<div class="ui-grid-a">
+		<div class="ui-block-a">blah</div>
+		<div class="ui-block-b">
+		<form id="lisa" data-rel="back">
+			<input type="text" name="cantidad" id="cantidad" value="" data-mini="true" pattern="[0-9]+" />
+		</form>
+			</div>
+			</div>
+		
+		<br /><br />
+		
+		<!-- end lisa -->
+
+<a href="//pedidos/articulo/111" data-role="button" data-theme="b" id="pedidos-articulos-editar-aceptar" data-rel="back">Aceptar</a>
+<a href="//pedidos/articulo/111" data-rel="back" data-role="button" data-theme="c" id="pedidos-articulos-editar-cancelar">Cancelar</a>
+
+<script>
+$(document).bind('pageshow', function() {
+    $($(':input:visible')[0]).focus().select();
+});  
+var pedido_id = 111;
+var articulo_id = 15;
+</script>
+	</div><!-- /content -->
+
+	
+	</div>
+</body>
+</html>
