@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+         <link rel="stylesheet" href="js/jquery.mobile.css">
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.mobile.js"></script>
+    
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>jQuery 6992</title>
+    </head>
+    <body>
+          <div data-role="page">
+
+  <div data-role="header" data-position="fixed">
+    <div class="ui-btn-left">
+      <a href="http://google.com/" data-role="button" data-icon="star" data-inline="true" data-iconpos="notext">Button 1</a>
+      <a href="http://google.com/" data-role="button" data-icon="check" data-inline="true" data-iconpos="notext">Button 2</a>
+    </div>
+    <h1 class="ui-title">Heading</h1>
+  </div><!-- /header -->
+
+  <div data-role="content">
+
+    <h1>How to submit an issue in jQuery Mobile</h1>
+    <p>If you think you've found a bug, please report it by following these instructions: </p>
+	<ol>
+		<li>Make sure that the bug still exists at <a href="http://jquerymobile.com/test/">jquerymobile.com/test</a> (up-to-the-minute latest build) as it may be fixed already. </li>
+		<li>Check to see if the issue has already been reported in the <a href="https://github.com/jquery/jquery-mobile/issues">issue tracker</a>. </li>
+		<li>If you found a issue to report, start by creating a simplified test page in this jsbin that uses the least amount of code to illustrate the problem. We won't review a complex page or site with a note "this is broken".</li>
+		<li>Include a detailed set of steps to reproduce the issue on your test page</li>
+		<li>Specify what device, OS version, and browser/version where the issue can be seen</li>
+ 		<li>If this is a regression, specify what version of the jQuery Mobile code or commit where things were working correctly.</li>
+	</ol>
+    <p>This page links to the latest JS and CSS files and will be updated with each new commit within one minute.</p>
+    
+    <h3>Using JS Bin</h3>
+    <p>Since this tool uses hash changes in the URL, it can confuse jQuery Mobile. Do not turn on the real-time preview feature. To view your changes, hit the "Save" link, then click on the link that appears to the left of the button. To edit, press the back button or add /edit/ after the URL. </p>
+
+  </div><!-- /content -->
+
+   <div data-role="footer">
+    <h4>Footer</h4>
+  </div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
