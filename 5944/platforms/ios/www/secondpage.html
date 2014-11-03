@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Second Page</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="js/jquery.mobile.css" />
+<!--
+    <script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+      <script type="text/javascript" src="bower_components/jquery-mobile/js/jquery.mobile.js"></script>
+-->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+  </head>
+  <body>
+    <div id="secondPage" data-role="page">
+      <div class="ui-content" role="main">
+        <div data-role="tabs">
+          <div id="notDoneTabs" data-role="navbar" data-iconpos="left">
+            <ul>
+              <li><a href="#firstTab">First Tab</a></li>
+              <li><a href="#secondTab">Second Tab</a></li>
+            </ul>
+          </div>
+          <div id="firstTab">first tab contents</div>
+          <div id="secondTab">second tab contents</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
