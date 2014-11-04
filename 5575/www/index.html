@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+         <link rel="stylesheet" href="js/jquery.mobile.css">
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.mobile.js"></script>
+    
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>jQuery 6767</title>
+          <script>
+            var hidden = false, ms_time1 = {};
+
+            function ms_Timeout(fn, interval, scope, args) {
+                scope = scope || window;
+                var self = this;
+                var wrap = function() {
+                    self.clear();
+                    fn.apply(scope, args || arguments);
+                };
+                this.id = setTimeout(wrap, interval);
+            }
+            ;
+            ms_Timeout.prototype.id = null;
+            ms_Timeout.prototype.set = true;
+            ms_Timeout.prototype.clear = function() {
+                clearTimeout(this.id);
+                this.set = false;
+                this.id = null;
+            };
+
+            function hide() {
+                if (document.height < window.outerHeight)
+                    document.body.style.height = (window.outerHeight + 50) + 'px';
+                if (ms_time1.set)
+                    ms_time1.clear();
+                ms_time1 = new ms_Timeout(function() {
+                    window.scrollTo(0, 1);
+                }, 200);
+            }
+            ;
+
+            $(document).on("pageinit", function() {
+                $("#switch").click(function() {
+                    if (hidden) {
+                        $("#switch div").text("jQM Std").attr("style", "color:red");
+                        hidden = false;
+                    }
+                    else {
+                        $("#switch div").text("hide on").attr("style", "color:green");
+                        hidden = true;
+                    }
+                });
+            });
+
+            $.mobile.window.resize(function() {
+                if (hidden)
+                    hide();
+            });
+        </script>
+</head>
+  
+    <body>
+
+        <div data-role=page >
+
+            <div data-role=header data-tap-toggle="false" data-position="fixed">
+                <a id="switch"><div style="color:red;">jQM Std</div></a>
+                <h1>TESTHEADER</h1>
+                
+            </div>
+          
+            <div data-role=content>
+            
+                <form>
+                    <label for='luser' class='ui-hidden-accessible'>username</label>
+                    <input type='text' name='luser' id='luser' value='' placeholder='username'/>
+                    <label for='lpass' class='ui-hidden-accessible'>password</label>
+                    <input type='password' name='lpass' id='lpass' value='' placeholder='password'/>
+                    <input type='submit' id='lvali' data-mini='true' value='OK'/>
+                </form>
+                         
+          </div>
+
+            <div data-tap-toggle="false" data-role="footer" data-position="fixed">ROTATE PHONE TO TEST</div>
+
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
